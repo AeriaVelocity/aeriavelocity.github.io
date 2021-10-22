@@ -1,0 +1,30 @@
+/* m8.css - CSS for my website */
+h1, h2, h3 {
+	line-height: 1.4;
+}
+body {
+	font-family: sans-serif;
+	margin: 40px auto;
+	padding: 0 10px;
+	font-size: 16px;
+	line-height: 1.6;
+	max-width: 750px;
+}
+@media (prefers-color-scheme: light) {
+    body {
+        color: #333444;
+        background-color: #eee;
+    }
+    a {
+        color: #333555;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+		color: #eee;
+        background-color: #333444;
+    }
+    a {
+        color: #eeefff;
+    }
+}
