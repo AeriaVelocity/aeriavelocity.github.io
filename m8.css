@@ -28,14 +28,3 @@ body {
         color: #eeefff;
     }
 }
-.header {
-	display: flex;
-	align-items: left;
-	justify-content: left;
-}
-.avatar {
-	flex-basis: 40%;
-}
-.name {
-	padding-left: 20px;
-}
