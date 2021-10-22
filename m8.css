@@ -3,7 +3,7 @@ h1, h2, h3 {
 	line-height: 1.4;
 }
 body {
-	font-family: sans-serif;
+	font-family: monospace;
 	margin: 40px auto;
 	padding: 0 10px;
 	font-size: 16px;
