@@ -20,6 +20,7 @@ body {
 	line-height: 1.6;
 	max-width: 750px;
 }
+input { font-family: monospace; }
 @media (prefers-color-scheme: light) {
     body {
         color: #333444;
@@ -42,6 +43,12 @@ body {
     }
     .avatar {
         border-color: #2d3958;
+    }
+    input[type=text] {
+        border: 2px solid #2d3958;
+        color: white;
+        background-color: #333555;
+        padding: 2px;
     }
 }
 figcaption {
