@@ -23,25 +23,25 @@ body {
 @media (prefers-color-scheme: light) {
     body {
         color: #333444;
-        background-color: #dbdcdd;
+        background-color: #e9e4d2;
     }
     a {
         color: #333555;
     }
     .avatar {
-        border-color: #ecedee;
+        border-color: #e0d4a8;
     }
 }
 @media (prefers-color-scheme: dark) {
     body {
 		color: #fff;
-        background-color: #333444;
+        background-color: #171b25;
     }
     a {
         color: #eeefff;
     }
     .avatar {
-        border-color: #444555;
+        border-color: #2d3958;
     }
 }
 figcaption {
