@@ -61,7 +61,7 @@ figcaption {
     justify-content: center;
 }
 #my-name { font-size: 40px; }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 540px) {
     #avatar-image { 
         width: 75px;
         height: 75px;
