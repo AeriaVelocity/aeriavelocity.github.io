@@ -5,6 +5,7 @@
     top: 0;
     width: 100%
 }
+.avatar { float: right; }
 #avatar-image {
     height: 120px;
     border: 3px solid;
@@ -37,7 +38,7 @@ input { font-family: monospace; }
         background-color: #171b25;
     }
     a { color: #eeefff; }
-    .avatar { border-color: #2d3958; }
+    #avatar-image { border-color: #2d3958; }
     .header { background-color: #171b25c9; }
     input[type=text] {
         border: 2px solid #2d3958;
@@ -56,7 +57,11 @@ figcaption {
 }
 #my-name { font-size: 40px; }
 @media only screen and (max-width: 650px) {
-    .avatar { display: none; }
+    #avatar-image { 
+        width: 100px;
+        height: auto;
+    }
+    #avatar-notice { display: none; }
     .social-links { display: none; }
     #separator { justify-content: left; }
 }
