@@ -31,7 +31,12 @@ body {
     background-color: #e9e4d2;
 }
 a { color: #333555; }
-input { font-family: monospace; }
+input {
+    font-family: monospace;
+    border: 2px solid #c7bd95;
+    background-color: #f3e8be;
+    padding: 2px;
+}
 @media (prefers-color-scheme: dark) {
     body {
 		color: #fff;
@@ -40,11 +45,10 @@ input { font-family: monospace; }
     a { color: #eeefff; }
     #avatar-image { border-color: #2d3958; }
     .header { background-color: #171b25c9; }
-    input[type=text] {
+    input {
         border: 2px solid #2d3958;
         color: white;
         background-color: #333555;
-        padding: 2px;
     }
 }
 figcaption {
@@ -64,4 +68,9 @@ figcaption {
     #avatar-notice { display: none; }
     .social-links { display: none; }
     #separator { justify-content: left; }
+}
+#colourbutton {
+    border: none;
+    border-radius: 2px;
+    font-family: monospace;
 }
