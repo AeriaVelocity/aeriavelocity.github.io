@@ -51,13 +51,14 @@ figcaption {
     text-align: center;
 }
 #separator {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 @media only screen and (max-width: 650px) {
     .social-links {
         display: none;
     }
     #separator {
-        text-align: left;
+        justify-content: left;
     }
 }
