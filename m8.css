@@ -5,7 +5,7 @@
     top: 0;
     width: 100%
 }
-.avatar {
+#avatar-image {
     height: 120px;
     border: 3px solid;
     border-color: #e0d4a8;
@@ -56,7 +56,7 @@ figcaption {
 }
 #my-name { font-size: 40px; }
 @media only screen and (max-width: 650px) {
+    .avatar { display: none; }
     .social-links { display: none; }
     #separator { justify-content: left; }
-    #my-name { font-size: 35px; }
 }
