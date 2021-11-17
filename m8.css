@@ -1,7 +1,14 @@
 /* m8.css - CSS for my website */
+.header {
+    background-color: #e9e4d2c9;
+    position: sticky;
+    top: 0;
+    width: 100%
+}
 .avatar {
     height: 120px;
     border: 3px solid;
+    border-color: #e0d4a8;
 }
 .social-links {
     text-align: center;
@@ -19,31 +26,19 @@ body {
 	font-size: 16px;
 	line-height: 1.6;
 	max-width: 750px;
+    color: #333444;
+    background-color: #e9e4d2;
 }
+a { color: #333555; }
 input { font-family: monospace; }
-@media (prefers-color-scheme: light) {
-    body {
-        color: #333444;
-        background-color: #e9e4d2;
-    }
-    a {
-        color: #333555;
-    }
-    .avatar {
-        border-color: #e0d4a8;
-    }
-}
 @media (prefers-color-scheme: dark) {
     body {
 		color: #fff;
         background-color: #171b25;
     }
-    a {
-        color: #eeefff;
-    }
-    .avatar {
-        border-color: #2d3958;
-    }
+    a { color: #eeefff; }
+    .avatar { border-color: #2d3958; }
+    .header { background-color: #171b25c9; }
     input[type=text] {
         border: 2px solid #2d3958;
         color: white;
