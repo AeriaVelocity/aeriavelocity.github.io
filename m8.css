@@ -69,8 +69,9 @@ figcaption {
     .social-links { display: none; }
     #separator { justify-content: left; }
 }
-#colourbutton {
+#colourpreview {
     border: none;
     border-radius: 2px;
     font-family: monospace;
+    padding: 0 5px;
 }
