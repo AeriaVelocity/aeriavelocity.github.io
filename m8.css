@@ -54,11 +54,9 @@ figcaption {
     display: flex;
     justify-content: center;
 }
+#my-name { font-size: 40px; }
 @media only screen and (max-width: 650px) {
-    .social-links {
-        display: none;
-    }
-    #separator {
-        justify-content: left;
-    }
+    .social-links { display: none; }
+    #separator { justify-content: left; }
+    #my-name { font-size: 25px; }
 }
