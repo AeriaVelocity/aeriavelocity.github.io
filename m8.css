@@ -63,12 +63,14 @@ figcaption {
 #my-name { font-size: 40px; }
 @media only screen and (max-width: 650px) {
     #avatar-image { 
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
     }
     #avatar-notice { display: none; }
     .social-links { display: none; }
-    #separator { justify-content: left; }
+    #separator { display: none;}
+    #my-name { font-size: 30px; line-height: 1; }
+    #description { font-size: 16px; line-height: 1.4; }
 }
 #colourpreview {
     border: none;
