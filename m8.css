@@ -58,5 +58,5 @@ figcaption {
 @media only screen and (max-width: 650px) {
     .social-links { display: none; }
     #separator { justify-content: left; }
-    #my-name { font-size: 35px; }
+    #my-name { font-size: 1.5em; }
 }
