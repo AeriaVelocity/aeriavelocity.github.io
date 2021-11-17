@@ -59,7 +59,7 @@ figcaption {
 @media only screen and (max-width: 650px) {
     #avatar-image { 
         width: 100px;
-        height: auto;
+        height: 100px;
     }
     #avatar-notice { display: none; }
     .social-links { display: none; }
