@@ -38,6 +38,13 @@ input {
     background-color: #f3e8be;
     padding: 2px;
 }
+.footer {
+	font-size: 14px;
+	position: sticky;
+	bottom: 0;
+    text-align: left;
+    background-color: #e9e4d2c9;
+}
 @media (prefers-color-scheme: dark) {
     body {
 		color: #fff;
@@ -46,6 +53,7 @@ input {
     a { color: #eeefff; }
     #avatar-image { border-color: #2d3958; }
     .header { background-color: #171b25c9; }
+    .footer { background-color: #171b25c9; }
     input {
         border: 2px solid #2d3958;
         color: white;
@@ -68,6 +76,7 @@ figcaption {
     }
     #avatar-notice { display: none; }
     .social-links { display: none; }
+    .footer { display: none; }
     #separator { display: none;}
     #my-name { font-size: 30px; line-height: 1; }
     #description { font-size: 16px; line-height: 1.4; }
