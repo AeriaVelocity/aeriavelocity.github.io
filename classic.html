@@ -1,24 +1,31 @@
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://that1m8head.github.io">
-		<meta property="og:title" content="Arsalan Kazmi's personal website">
-		<meta property="og:description" content="I'm a hacker, developer, modder and artist.">
-		<meta property="description" content="I'm a hacker, developer, modder and artist.">
-		<link rel='stylesheet' type='text/css' href='m8.css'>
 		<title>Arsalan Kazmi's personal website</title>
 		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		<style>
+			body {
+				color: #000000;
+				background-image: url("classic-bg-light.png");
+				background-repeat: repeat;
+				font-family: "System", serif;
+			}
+			a { color: #000fdd; }
+			a:visited { color:#000988; }
+			@media (prefers-color-scheme: dark) {
+				body {
+				color: #fff;
+				background-image: url("classic-bg-dark.png");
+				}
+				a { color: #60bfff; }
+				a:visited { color: #4186b4; }
+			}
+		</style>
 	</head>
 	<body>
-		<div class="header">
-			<b id="my-name">Arsalan Kazmi</b>
-			<figure class="avatar">
-				<img src="https://avatars.githubusercontent.com/u/16748384" id="avatar-image"/>
-				<figcaption id="avatar-notice">Avatar pulled<br>from GitHub</figcaption>
-			</figure>
-			<p id="description">20 year old college student who likes doing stupid stuff with computers.</p>
-			<div class="social-links">
+		<h1 id="my-name">Arsalan Kazmi</h1>
+			<img src="https://avatars.githubusercontent.com/u/16748384" width=100px/>
+			<p>20 year old college student who likes doing stupid stuff with computers.</p>
+			<div>
 				<a href="https://www.youtube.com/channel/UCN03oe-sc2iHqcTKf9fTwYQ" id="social">YouTube</a>
 				<a href="https://www.github.com/That1M8Head" id="social">GitHub</a>
 				<a href="https://www.twitter.com/That1M8Head" id="social">Twitter</a>
@@ -45,16 +52,9 @@
 			I've made quite a few websites, but I've only just started doing them using just HTML and CSS (yep, this website has no JavaScript); my last three attempts of making myself a website were all done in website builders.
 		</p>
 		<p>
-			This website is intentionally simplistic -- because it's part of my design philosophy for websites.<br>
-			I believe the number one thing that websites should be able to do is communicate to the user through text.<br>
-			Another thing in my web design philosophy is that a website should detect and apply a dark mode through CSS.<br>
+			I added a Classic Mode, just because I could. Yes, there's still a dark mode. :)
 		</p>
-		<p>
-			At the same time, I don't like using simple black and white -- for light mode, it's usually a warm colour and for dark mode, it's usually a dark blue.<br>
-			For this website that means <code id="colourpreview" style="color:#333444;background-color:#e9e4d2;">#333444 on #e9e4d2</code> and <code id="colourpreview" style="color:#fff;background-color:#171b25;">#ffffff on #171b25</code> for light and dark mode respectively.
-		</p>
-		<a href="/classic.html">Activate Classic Mode</a>
-		<br>
+		<a href="/index.html">Deactivate Classic Mode</a>
+		<p>You can <a href="https://github.com/That1M8Head/that1m8head.github.io">view the GitHub repo for this website.</a> This website contains no ads or tracking. It's hosted on <a href="https://pages.github.com">GitHub Pages</a>.</p>
 	</body>
-	<div class="footer">You can <a href="https://github.com/That1M8Head/that1m8head.github.io">view the GitHub repo for this website.</a> This website contains no ads or tracking. It's hosted on <a href="https://pages.github.com">GitHub Pages</a>.</div>
 </html>
