@@ -8,7 +8,7 @@ function logAnyKey() {
 function init_404() { 
     document.getElementById("command").innerHTML = "status";
     setTimeout(function() {
-        document.getElementById("output").innerHTML += "<span style=color:red>E404: " + new URL(document.URL).pathname + " : not found</span><br>";
+        document.getElementById("output").innerHTML += "<span style=color:red>E404: " + new URL(document.URL).pathname + ": not found</span><br>";
     }, 100)
 }
 
