@@ -33,6 +33,11 @@
 			}
 		</style>
 		<script src="mish.js"></script>
+		<script>
+			if (typeof init_404 == "undefined") {
+				window.location = "/error.html";
+			}
+		</script>
 		<title>root@that1m8head</title>
 	</head>
 	<body onload="init_404();">
