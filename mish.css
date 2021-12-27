@@ -1,0 +1,30 @@
+body {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#cursor { animation: blinking 1.2s infinite; }
+@keyframes blinking {
+    0% { opacity: 1; }
+    49% { opacity: 1; }
+    60% { opacity: 0; }
+    99% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#command-bar {
+    bottom: 0;
+    position: fixed;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: black;
+    width: 100%;
+}
+#command-bar a {
+    padding-right: 5px;
+}

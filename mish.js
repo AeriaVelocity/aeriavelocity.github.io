@@ -1,15 +1,88 @@
 /* @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later */
-document.addEventListener('keypress', logAnyKey);
-function logAnyKey() {
-    document.getElementById("output").innerHTML += "<span style='color:red'>E: Keypress detected</span>";
-    document.getElementById("output").innerHTML += "<br>"
-}
+document.addEventListener("keydown", function(e) {
+    key = e.key;
+    command = document.getElementById("command").innerHTML;
+    console.log(key);
+    switch (key) {
+        case "Backspace":
+            console.log("Backspace key pressed");
+            document.getElementById("command").innerHTML = command.slice(0, -1);
+            break;
+        case "Enter":
+            console.log("Enter key pressed");
+            switch (command.split(" ")[0]) {
+                case "clear":
+                    document.getElementById("output").innerHTML = "";
+                    break;
+                case "reboot":
+                case "version":
+                case "mish -v":
+                case "mish --version":
+                    document.getElementById("output").innerHTML += "mish, the Mouse-Interactive Shell, version 1.0 (js-pc-browser)<br> Copyright (C) 2021 That1M8Head<br> Licence GPLv3+: GNU GPL version 3 or later &lt;<a href=http://gnu.org/licenses/gpl.html>http://gnu.org/licenses/gpl.html</a>&gt;<br><br> This is free software; you are free to change and distribute it.<br>There is NO WARRANTY, to the extent permitted by law.";
+                    break;
+                default:
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E405: No such command<br></span>";
+                    break;
+                case "shutdown":
+                    switch (command.split(" ")[1]) {
+                        case "-h":
+                            document.getElementById("output").innerHTML += "System is going down for halt NOW!";
+                            setTimeout(function(){ document.write("<style>body{background-color:black;}</style>Error") }, 500)
+                            setTimeout(function(){ window.location = "index.html" }, 1000)
+                            break;
+                        case "-r":
+                            document.getElementById("output").innerHTML += "System is going down for reboot NOW!";
+                            setTimeout(function(){ document.write("<style>body{background-color:black;}</style>Error") }, 500)
+                            setTimeout(function(){ window.location = "mish.html" }, 1000)
+                            break;
+                        default:
+                            document.getElementById("output").innerHTML += "Usage<br>=======<br>shutdown -h - shut down<br>shutdown -r - reboot<br><br>";
+                            break;
+                    }
+                break;
+                case "help":
+                    document.getElementById("output").innerHTML += "You can interact with mish using the command bar at the bottom of the browser window.<br>You can also type commands in.";
+                    break;
+                case "ls":
+                case "dir":
+                    document.getElementById("output").innerHTML += "/.<br> /..<br>";
+                    break;
+                case "cd":
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E501: Not implemented<br></span>";
+                    break;
+            }
+            console.log("Command string is \"" + command + "\"");
+            document.getElementById("command").innerHTML = "";
+            break;
+        case "Control":
+        case "Shift":
+        case "Alt":
+        case "OS":
+        case "CapsLock":
+        case "Tab":
+        case "ContextMenu":
+        case "AltGraph":
+            break;
+        case "ArrowLeft":
+        case "ArrowRight":
+            document.getElementById("output").innerHTML += "<span style='color:red'>E501: mish does not support moving cursor<br></span>";
+            break;
+        case "ArrowUp":
+        case "ArrowDown":
+            document.getElementById("output").innerHTML += "<span style='color:red'>E501: mish does not support command history<br></span>";
+            break;
+        default:
+            document.getElementById("command").innerHTML += key;
+            break;
+    }
+});
 
+function mish_init() { console.log("mish has started!"); }
 function init_404() { 
     document.getElementById("command").innerHTML = "status";
     setTimeout(function() {
         document.getElementById("output").innerHTML += "<span style=color:red>E404: " + new URL(document.URL).pathname + ": not found</span><br>";
-    }, 100)
+    }, 200)
 }
 
 function mish_cmd(command, output) {
@@ -17,21 +90,38 @@ function mish_cmd(command, output) {
     setTimeout(function() {
         document.getElementById("output").innerHTML += output;
         document.getElementById("output").innerHTML += "<br><br>";
-    }, 100)
+        document.getElementById("command").innerHTML = "";
+    }, 200)
 }
 function mish_clear() {
     document.getElementById("command").innerHTML = "clear";
     setTimeout(function() {
         document.getElementById("command").innerHTML = "";
         document.getElementById("output").innerHTML  = "";
-    }, 100)
+    }, 200)
+}
+function mish_datetime() {
+    const d = new Date();
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let ampm = d.getHours() >= 12 ? 'pm' : 'am';
+    let date_output = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear() + " at " + d.getHours()%12 + ":" + d.getMinutes() + " " + ampm;
+    document.write(date_output);
 }
 
 function version() {
-    mish_cmd("mish --version", "mish, the Mouse-Interactive Shell, version 1.0 (js-pc-browser)<br> Copyright (C) 2021 That1M8Head<br> Licence GPLv3+: GNU GPL version 3 or later &lt;<a href=http://gnu.org/licenses/gpl.html>http://gnu.org/licenses/gpl.html</a>&gt;<br><br> This is free software; you are free to change and distribute it.<br>There is NO WARRANTY, to the extent permitted by law.", true);
+    mish_cmd("mish --version", "mish, the Mouse-Interactive Shell, version 1.0 (js-pc-browser)<br> Copyright (C) 2021 That1M8Head<br> Licence GPLv3+: GNU GPL version 3 or later &lt;<a href=http://gnu.org/licenses/gpl.html>http://gnu.org/licenses/gpl.html</a>&gt;<br><br> This is free software; you are free to change and distribute it.<br>There is NO WARRANTY, to the extent permitted by law.");
+}  
+function help() {
+    mish_cmd("help", "You can interact with mish using the command bar at the bottom of the browser window.<br>You can also type commands in.");
 }  
 function reboot() {
-    mish_cmd("shutdown -r now", "System is going down for reboot NOW!", true);
-    setTimeout(function(){ window.location = "index.html" }, 500)
+    mish_cmd("shutdown -r now", "System is going down for reboot NOW!");
+    setTimeout(function(){ document.write("<style>body{background-color:black;}</style>Error") }, 500)
+    setTimeout(function(){ window.location = "mish.html" }, 1000)
+}
+function shutdown() {
+    mish_cmd("shutdown -h now", "System is going down for halt NOW!");
+    setTimeout(function(){ document.write("<style>body{background-color:black;}</style>Error") }, 500)
+    setTimeout(function(){ window.location = "index.html" }, 1000)
 }
 /* @license-end */
