@@ -15,6 +15,10 @@ document.addEventListener("keydown", function(e) {
                     document.getElementById("output").innerHTML = "";
                     break;
                 case "reboot":
+                    document.getElementById("output").innerHTML += "System is going down for reboot NOW!";
+                    setTimeout(function(){ document.write("<style>body{background-color:black;}</style>Error") }, 500)
+                    setTimeout(function(){ window.location = "mish.html" }, 1000)
+                    break;
                 case "version":
                 case "mish -v":
                 case "mish --version":
