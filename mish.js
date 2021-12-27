@@ -55,6 +55,33 @@ document.addEventListener("keydown", function(e) {
                 case "reboot":
                     document.getElementById("output").innerHTML += "To reboot mish, use 'shutdown -r'";
                     break;
+                case "man":
+                    switch (command.split(" ")[1]) {
+                        case undefined:
+                            document.getElementById("output").innerHTML += "Usage<br>=======<br>man &lt;entry&gt; - go to manual page for entry<br>man man - get help about man";
+                            break;
+                        case "man":
+                            document.getElementById("output").innerHTML += "<span style='color:red'>E404: There are no manuals.</span>";
+                            break;
+                        default:
+                            document.getElementById("output").innerHTML += "No manual entry for ";
+                            document.getElementById("output").innerHTML += command.split(" ")[1];
+                            break;
+                    } 
+                    break;
+                case "vi":
+                case "vim":
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E403: You can't handle the vi.</span>";
+                    break;
+                case "emacs":
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E404: rms.dll was not found.</span>";
+                    break;
+                case "ed":
+                    document.getElementById("output").innerHTML += "?";
+                    break;
+                case "nano":
+                    window.location = "https://www.youtube.com/watch?v=MosYMsZcL84";
+                    break;
             }
             document.getElementById("output").innerHTML += "<br>";
             console.log("Command string is \"" + command + "\"");
