@@ -25,7 +25,7 @@ document.addEventListener("keydown", function(e) {
                     document.getElementById("output").innerHTML += "mish, the Mouse-Interactive Shell, version 1.0 (js-pc-browser)<br> Copyright (C) 2021 That1M8Head<br> Licence GPLv3+: GNU GPL version 3 or later &lt;<a href=http://gnu.org/licenses/gpl.html>http://gnu.org/licenses/gpl.html</a>&gt;<br><br> This is free software; you are free to change and distribute it.<br>There is NO WARRANTY, to the extent permitted by law.";
                     break;
                 default:
-                    document.getElementById("output").innerHTML += "<span style='color:red'>E405: No such command<br></span>";
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E405: No such command</span>";
                     break;
                 case "shutdown":
                     switch (command.split(" ")[1]) {
@@ -40,7 +40,7 @@ document.addEventListener("keydown", function(e) {
                             setTimeout(function(){ window.location = "mish.html" }, 1000)
                             break;
                         default:
-                            document.getElementById("output").innerHTML += "Usage<br>=======<br>shutdown -h - shut down<br>shutdown -r - reboot<br><br>";
+                            document.getElementById("output").innerHTML += "Usage<br>=======<br>shutdown -h - shut down<br>shutdown -r - reboot<br>";
                             break;
                     }
                 break;
@@ -49,12 +49,13 @@ document.addEventListener("keydown", function(e) {
                     break;
                 case "ls":
                 case "dir":
-                    document.getElementById("output").innerHTML += "/.<br> /..<br>";
+                    document.getElementById("output").innerHTML += "/.<br> /..";
                     break;
                 case "cd":
-                    document.getElementById("output").innerHTML += "<span style='color:red'>E501: Not implemented<br></span>";
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E501: Not implemented</span>";
                     break;
             }
+            document.getElementById("output").innerHTML += "<br>";
             console.log("Command string is \"" + command + "\"");
             document.getElementById("command").innerHTML = "";
             break;
