@@ -82,6 +82,15 @@ document.addEventListener("keydown", function(e) {
                 case "nano":
                     window.location = "https://www.youtube.com/watch?v=MosYMsZcL84";
                     break;
+                case "search":
+                    let term = command.split(" ")[1];
+                    console.log(term);
+                    if (term != undefined) {
+                        let urltovisit = "https://duckduckgo.com/?q=" + term;
+                        window.location = urltovisit;
+                    } else {
+                        document.getElementById("output").innerHTML += "Usage<br>=======<br>search &lt;term&gt;<br>";
+                    }
             }
             document.getElementById("output").innerHTML += "<br>";
             console.log("Command string is \"" + command + "\"");
