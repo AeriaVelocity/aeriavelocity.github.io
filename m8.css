@@ -1,5 +1,5 @@
 /* m8.css - CSS for my website */
-@import url("https://that1m8head.github.io/standard.css");
+@import "standard.css";
 .header {
     background-color: #e9e4d2c9;
     position: sticky;
