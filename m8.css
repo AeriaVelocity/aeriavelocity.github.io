@@ -13,7 +13,9 @@
     border: 3px solid;
     border-color: #e0d4a8;
     border-radius: 10px;
+    transition: .25s;
 }
+#avatar-image:hover { border-color: #ccb86d; border-radius: 5px; }
 .social-links {
     text-align: center;
 }
@@ -44,6 +46,7 @@
 @media (prefers-color-scheme: dark) {
     #separator { background-color: #ddd; }
     #avatar-image { border-color: #2d3958; }
+    #avatar-image:hover { border-color: #294ca7; }
     .header, .footer { background-color: #27272cc9; }
     .code-block { background-color: #333444; }
 }

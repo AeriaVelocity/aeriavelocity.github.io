@@ -12,7 +12,8 @@ body {
     color: #333444;
     background-color: #e9e4d2;
 }
-a { color: #333555; }
+a       { color: #333555; transition: .15s; }
+a:hover { color: #9a8742; }
 img { max-width: 100%; }
 code {
     font-size: 14px;
@@ -25,6 +26,7 @@ code {
 	color: #fff;
         background-color: #27272c;
     }
-    a { color: #eeefff; }
+    a       { color: #eeeeee; }
+    a:hover { color: #6e8ad0; }
     code { background-color: #333444; }
 }
