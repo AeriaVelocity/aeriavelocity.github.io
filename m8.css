@@ -36,10 +36,16 @@
     border: 0 none;
     margin-top: 15px;
 }
+.code-block {
+    border-radius: 5px;
+    background-color: #d8d3c1;
+    padding: 2px;
+}
 @media (prefers-color-scheme: dark) {
     #separator { background-color: #ddd; }
     #avatar-image { border-color: #2d3958; }
     .header, .footer { background-color: #27272cc9; }
+    .code-block { background-color: #333444; }
 }
 figcaption {
     font-size: 14px;
