@@ -33,6 +33,7 @@ body {
     background-color: #e9e4d2;
 }
 a { color: #333555; }
+img { max-width: 100%; }
 .footer {
 	font-size: 14px;
 	position: sticky;
