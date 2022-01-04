@@ -1,0 +1,23 @@
+/* standard.css - Generic CSS for my website and also whatever else I want a quick CSS thing for */
+h1, h2, h3 {
+    line-height: 1;
+}
+body {
+    font-family: serif;
+    margin: auto;
+    padding: 0 10px 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 750px;
+    color: #333444;
+    background-color: #e9e4d2;
+}
+a { color: #333555; }
+img { max-width: 100%; }
+@media (prefers-color-scheme: dark) {
+    body {
+	color: #fff;
+        background-color: #27272c;
+    }
+    a { color: #eeefff; }
+}
