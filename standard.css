@@ -14,11 +14,17 @@ body {
 }
 a { color: #333555; }
 img { max-width: 100%; }
-code { font-size: 14px; }
+code {
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #d8d3c1;
+    padding: 2px;
+}
 @media (prefers-color-scheme: dark) {
     body {
 	color: #fff;
         background-color: #27272c;
     }
     a { color: #eeefff; }
+    code { background-color: #333444; }
 }
