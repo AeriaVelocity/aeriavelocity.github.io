@@ -64,6 +64,9 @@ figcaption {
     #my-name { font-size: 35px; line-height: 1; }
     #description { display: none; }
 }
+@media only screen and (max-height: 450px) {
+	.header { position: relative; }
+}
 #colourpreview {
     border: none;
     border-radius: 2px;
