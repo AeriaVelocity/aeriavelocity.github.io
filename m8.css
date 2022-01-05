@@ -1,5 +1,7 @@
 /* m8.css - CSS for my website */
 @import "standard.css";
+
+/* Header */
 .header {
     background-color: #e9e4d2c9;
     position: sticky;
@@ -7,28 +9,8 @@
     width: 100%;
     padding-top: 30px;
 }
-.avatar { float: right; }
-#avatar-image {
-    height: 120px;
-    border: 3px solid;
-    border-color: #e0d4a8;
-    border-radius: 10px;
-    transition: .25s;
-}
-#avatar-image:hover { border-color: #ccb86d; border-radius: 5px; }
-.social-links {
-    text-align: center;
-}
-#social {
-    padding-right: 20px;
-}
-.footer {
-	font-size: 14px;
-	position: sticky;
-	bottom: 0;
-    text-align: left;
-    background-color: #e9e4d2c9;
-}
+.social-links { text-align: center; }
+#social       { padding-right: 20px; }
 #separator {
     display: flex;
     background-color: #736f63;
@@ -38,24 +20,37 @@
     border: 0 none;
     margin-top: 15px;
 }
-.code-block {
-    border-radius: 5px;
-    background-color: #d8d3c1;
-    padding: 2px;
+#my-name {
+	font-size: 40px;
+	line-height: 1;
+	margin: 0;
+	display: inline;
 }
-@media (prefers-color-scheme: dark) {
-    #separator { background-color: #ddd; }
-    #avatar-image { border-color: #2d3958; }
-    #avatar-image:hover { border-color: #294ca7; }
-    .header, .footer { background-color: #27272cc9; }
-    .code-block { background-color: #333444; }
+
+/* Avatar */
+.avatar { float: right; }
+#avatar-image {
+    height: 120px;
+    border: 3px solid;
+    border-color: #e0d4a8;
+    border-radius: 10px;
+    transition: .25s;
 }
+#avatar-image:hover { border-color: #ccb86d; border-radius: 5px; }
 figcaption {
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
 }
-#my-name { font-size: 40px; line-height: 1; margin: 0; display: inline; }
+
+/* Full-width code block */
+.code-block {
+    border-radius: 5px;
+    background-color: #d8d3c1;
+    padding: 2px;
+}
+
+/* Header stuff for when the screen is too small */
 @media only screen and (max-width: 508px) {
     #avatar-image { display: none; }
     #avatar-notice { display: none; }
@@ -67,9 +62,13 @@ figcaption {
 @media only screen and (max-height: 450px) {
 	.header { position: relative; }
 }
-#colourpreview {
-    border: none;
-    border-radius: 2px;
-	font-family: monospace;
-    padding: 0 5px;
+
+/* Dark mode stuff */
+@media (prefers-color-scheme: dark) {
+    #separator { background-color: #ddd; }
+    #avatar-image { border-color: #2d3958; }
+    #avatar-image:hover { border-color: #294ca7; }
+    .header, .footer { background-color: #27272cc9; }
+    .code-block { background-color: #333444; }
 }
+
