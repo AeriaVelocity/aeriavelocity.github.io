@@ -53,14 +53,18 @@ figcaption {
 /* Links for The Stuff Index */
 #stuff-link {
     padding: 10px 15px;
-    margin: 10px 0;
-    width: 100%;
+    margin: 10px auto;
+    width: 100%
     background-color: #e6d186;
     transition: .1s
 }
 #stuff-link:hover { background-color: #dbcfa1; }
 #stuff-link:active { background-color: #e9e4d2; }
-#the-stuff-link { padding-top: 2px; text-align: center; }
+#the-stuff-link { 
+    padding-top: 2px; 
+    text-align: center;
+    width: 90%; 
+}
 
 /* Header stuff for when the screen is too small */
 @media only screen and (max-width: 508px) {
