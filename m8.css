@@ -63,7 +63,6 @@ figcaption {
 #the-stuff-link { 
     padding-top: 2px; 
     text-align: center;
-    width: 90%; 
 }
 
 /* Header stuff for when the screen is too small */
@@ -75,6 +74,7 @@ figcaption {
     #my-name { font-size: 35px; line-height: 1; }
     #description { display: none; }
     #the-stuff-link { text-align: left; }
+    #stuff-link { width: 90%; }
 }
 @media only screen and (max-height: 450px) {
 	.header { position: relative; }
