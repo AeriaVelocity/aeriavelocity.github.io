@@ -91,6 +91,29 @@ document.addEventListener("keydown", function(e) {
                     } else {
                         document.getElementById("output").innerHTML += "Usage<br>=======<br>search &lt;term&gt;<br>";
                     }
+                    break;
+                case "win":
+                    document.getElementById("output").innerHTML += "<span style='color:red'>E403: This is not DOS!</span>";
+                    break;
+                case "neofetch":
+                    document.getElementById("output").innerHTML += "<img src='https://avatars.githubusercontent.com/u/16748384' style='width:200px;float:right'/>";
+                    document.getElementById("output").innerHTML += "user@that1m8head<br>";
+                    document.getElementById("output").innerHTML += "-----------------------<br>";
+                    document.getElementById("output").innerHTML += "OS: that1m8head<br>";
+                    document.getElementById("output").innerHTML += "Host: that1m8head.github.io<br>";
+                    document.getElementById("output").innerHTML += "Kernel: 100000000000000000000000000000000<br>";
+                    document.getElementById("output").innerHTML += "Uptime: I forgor<br>";
+                    document.getElementById("output").innerHTML += "Packages: 420<br>";
+                    document.getElementById("output").innerHTML += "Shell: mish 5.8<br>";
+                    document.getElementById("output").innerHTML += "Resolution: ";
+                    document.getElementById("output").innerHTML += window.innerWidth;
+                    document.getElementById("output").innerHTML += "x";
+                    document.getElementById("output").innerHTML += window.innerHeight;
+                    document.getElementById("output").innerHTML += "<br>";
+                    document.getElementById("output").innerHTML += "CPU: Jintel Celery @ 69GHz<br>";
+                    document.getElementById("output").innerHTML += "GPU: No<br>";
+                    document.getElementById("output").innerHTML += "Memory: 3456467435423547445MiB / 7939MiB<br>";
+                    break;
             }
             document.getElementById("output").innerHTML += "<br>";
             console.log("Command string is \"" + command + "\"");
