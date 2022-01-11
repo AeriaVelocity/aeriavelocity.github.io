@@ -50,6 +50,18 @@ figcaption {
     padding: 2px;
 }
 
+/* Links for The Stuff Index */
+#stuff-link {
+    padding: 10px 15px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #e6d186;
+    transition: .1s
+}
+#stuff-link:hover { background-color: #dbcfa1; }
+#stuff-link:active { background-color: #e9e4d2; }
+#the-stuff-link { padding-top: 2px; text-align: center; }
+
 /* Header stuff for when the screen is too small */
 @media only screen and (max-width: 508px) {
     #avatar-image { display: none; }
@@ -58,6 +70,7 @@ figcaption {
     .footer { display: none; }
     #my-name { font-size: 35px; line-height: 1; }
     #description { display: none; }
+    #the-stuff-link { text-align: left; }
 }
 @media only screen and (max-height: 450px) {
 	.header { position: relative; }
@@ -70,5 +83,7 @@ figcaption {
     #avatar-image:hover { border-color: #294ca7; }
     .header, .footer { background-color: #27272cc9; }
     .code-block { background-color: #333444; }
+    #stuff-link { background-color: #3e3e46; }
+    #stuff-link:hover { background-color: #4d4d5f; }
+    #stuff-link:active { background-color: #27272c; }
 }
-
