@@ -21,10 +21,10 @@
     margin-top: 15px;
 }
 #my-name {
-	font-size: 40px;
-	line-height: 1;
-	margin: 0;
-	display: inline;
+    font-size: 40px;
+    line-height: 1;
+    margin: 0;
+    display: inline;
 }
 
 /* Avatar */
@@ -52,15 +52,19 @@ figcaption {
 
 /* Links for The Stuff Index */
 #stuff-link {
-    padding: 10px 15px;
+    padding: 10px 20px;
     margin: 10px auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     width: 100%;
-    background-color: #e6d186;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(#ffffffaa, #eeeeeeaa);
     transition: .1s
 }
-#stuff-link:hover { background-color: #dbcfa1; }
-#stuff-link:active { background-color: #e9e4d2; }
-#the-stuff-link { 
+#stuff-link:active { box-shadow: none; }
+#the-stuff-link {
     padding-top: 2px; 
     text-align: center;
 }
@@ -77,7 +81,7 @@ figcaption {
     #stuff-link { width: 90%; }
 }
 @media only screen and (max-height: 450px) {
-	.header { position: relative; }
+    .header { position: relative; }
 }
 
 /* Dark mode stuff */
@@ -87,7 +91,9 @@ figcaption {
     #avatar-image:hover { border-color: #294ca7; }
     .header, .footer { background-color: #27272cc9; }
     .code-block { background-color: #333444; }
-    #stuff-link { background-color: #3e3e46; }
-    #stuff-link:hover { background-color: #4d4d5f; }
-    #stuff-link:active { background-color: #27272c; }
+    #stuff-link {
+        color: white;
+        background: linear-gradient(#3e3e46aa, #383840aa);
+        border-color: #58586b #3a3a40 #3a3a40 #58586b;
+    }
 }

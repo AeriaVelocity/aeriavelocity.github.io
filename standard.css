@@ -23,7 +23,7 @@ code {
 }
 @media (prefers-color-scheme: dark) {
     body {
-	color: #fff;
+        color: #fff;
         background-color: #27272c;
     }
     a       { color: #eeeeee; }
