@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>void</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                color: white;
+                background-color: black;
+                font-family: monospace;
+                font-size: 16px;
+                line-height: 1.3;
+                padding: 0px 10px;
+            }
+            a { color: white; }
+            #red { color: red; }
+            @media (prefers-color-scheme: light) {
+                body {
+                    color: black;
+                    background-color: white;
+                }
+                #red { color: darkred; }
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            ERROR: Your compute is broked and has been sent to the void.<br>
+            Bailing out, you are on your own. Good luck.</p>
+        <p>
+            mish: can't access tty; dropping to void<br>
+            [rootfs ]# void
+        </p>
+        <code id="red">
+            <pre>
+Symbol's function definition is void: void
+
+Error detected while processing void.vim:
+line    1:
+E492: Not an editor command: void
+
+main.c:3:5: warning: implicit declaration of function 'void' [-Wimplicit-function-declaration]
+
+ In function 'int main()':
+3:11: error: 'void' was not declared in this scope
+
+Traceback (most recent call last):
+    File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'void' is not defined
+
+error[E0425]: cannot find function `void` in this scope
+ --> src/main.rs:3:5
+  |
+3 |     void();
+  |     ^^^^ not found in this scope
+
+For more information about this error, try `rustc --explain E0425`.
+
+'void' is not recognized as an internal or external command,
+operable program or batch file.
+
+./void.sh: line 2: void: command not found</pre>
+        </code>
+        <p>If you will try to exit the void, click <span style="text-decoration:underline">the link</span><a href="index.html" style="text-decoration:none">.</a></p>
+    </body>
+</html>
