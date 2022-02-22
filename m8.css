@@ -1,107 +1,54 @@
 /* m8.css - CSS for my website */
-@import "standard.css";
-
-/* Header */
-.header {
-    background-color: #e9e4d2c9;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding-top: 30px;
+:root {
+    /* I can just change these values whenever I want to change the website's colour scheme lol */
+    --text: #ffffff;
+    --background: #2e2e2e;
+    --link: #b4d273;
+    --heading: #e5b567;
+    --comment: #797979;
+    --error: #f92672;
 }
-#description  { padding: 1px auto; }
-.social-links { text-align: center; }
-#social       { padding-right: 15px; }
-#separator {
-    display: flex;
-    background-color: #736f63;
-    justify-content: center;
-    width: 250px;
-    height: 1px;
-    border: 0 none;
-    margin-top: 15px;
+body {
+    font-size: 16px;
+    font-family: monospace;
+    color: var(--text);
+    background-color: var(--background);
+    text-align: center;
+    overflow-y: none;
 }
-#my-name {
-    font-size: 40px;
-    line-height: 1;
+.content {
+    width: 50vw;
+    height: 80%;
     margin: 0;
-    display: inline;
+    overflow-y: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-#my-name a {
-    color: inherit;
-}
-
-/* Avatar */
-#avatar {
-    float: right;
-    height: 140px;
-    border: 4px solid;
-    border-color: #e0d4a8;
-    border-radius: 25px;
-    margin: 0 15px;
-    transition: .2s;
-}
-#avatar:hover  { border-color: #f1afef; border-radius: 10px; }
-#avatar:active { border-radius: 30px; }
-
-/* Full-width code block */
-.code-block {
-    border-radius: 5px;
-    background-color: #d8d3c1;
-    padding: 8px 10px;
-    width: 95%;
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { color: var(--heading); line-height: 1; }
+.avatar {
+    width: 150px;
     margin: auto;
-    line-height: 1.4;
+    display: block;
+    border-radius: 5px;
 }
-
-/* Links for The Stuff Index */
-#stuff-link {
-    padding: 10px 20px;
-    margin: 10px auto;
-    border-radius: 6px;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    width: 90%;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    background: linear-gradient(#ffffffaa, #eeeeeeaa);
-    transition: .1s
+code {
+    color: var(--code);
 }
-#stuff-link:active { box-shadow: none; }
-#the-stuff-link {
-    padding-top: 2px; 
-    text-align: center;
+#comment {
+    color: var(--comment);
+    font-style: italic;
 }
-
-/* Header stuff for when the screen is too small */
-@media only screen and (max-width: 677px) {
-    #avatar { height: 100px; }
-    #social { display: none; }
-    .social-links { text-align: left; }
-    #my-name { font-size: 35px; line-height: 1; }
-    #description { display: none; }
-    #separator { margin: 15px 0; }
+@media (max-height: 900px) {
+    .content {
+        height: 95%;
+    }
 }
-@media only screen and (max-height: 450px) {
-    .header { position: relative; }
-}
-@media only screen and (max-width: 418px) {
-    #avatar { height: 50px; border-radius: 15px; }
-}
-@media only screen and (max-width: 368px) {
-    #avatar { display: none; }
-}
-
-/* Dark mode stuff */
-@media (prefers-color-scheme: dark) {
-    #separator { background-color: #ddd; }
-    #avatar { border-color: #21242b; }
-    #avatar:hover { border-color: #51afef; }
-    .header, .footer { background-color: #282c34c9; }
-    .code-block { background-color: #21242b; }
-    #stuff-link {
-        color: white;
-        background: linear-gradient(#3e3e46aa, #383840aa);
-        border-color: #58586b #3a3a40 #3a3a40 #58586b;
+@media (max-width: 475px) {
+    .content {
+        width: 95%;
     }
 }

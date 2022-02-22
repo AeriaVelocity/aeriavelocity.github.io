@@ -1,27 +1,31 @@
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="mish.css">
-		<script src="mish.js"></script>
-		<script>
-			if (typeof mish_init == "undefined") {
-				window.location = "/error.html";
-			}
-		</script>
-		<title>mish rescue</title>
-	</head>
-	<body onload="init_404();">
-		<p>
-			error: no such page.<br>
-			Entering rescue mode...<br>
-			mish rescue > <span id="command"></span><span id="cursor">_</span><br>
-			<span id="output"></span>
-			<div id="command-bar">
-				<a onclick="init_404();">status</a>
-				<a onclick="version();">version</a>
-				<a onclick="mish_clear();">clear</a>
-				<a onclick="reboot();">reboot</a>
-			</div>
-		</p>
-	</body>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Arsalan Kazmi</title>
+        <meta name="description" content="Arsalan Kazmi's personal website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
+        <link rel="stylesheet" href="m8.css" type="text/css">
+    <body>
+        <div class="content">
+			<img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img>
+            <h1>Arsalan Kazmi</h1>
+            <p id="comment">/* 20 year old college student who likes doing stupid stuff with computers */</p>
+            <p>
+                <a href="https://github.com/That1M8Head">GitHub</a> --
+                <a href="https://twitter.com/That1M8Head">Twitter</a> --
+                <a href="https://www.youtube.com/channel/UCN03oe-sc2iHqcTKf9fTwYQ">YouTube</a> --
+                <a href="thestuffindex.html">The Stuff Index</a>
+            </p>
+            <br>
+
+            <h2>404</h2>
+            <p style="color:var(--error)">No such page.</p>
+            <p style="color:var(--error)">That page probably was never written, or you tried to access something that doesn't exist anymore.</p>
+            <a href="index.html">Get out of here</a>
+            <br>
+      </div>
+    </body>
 </html>
