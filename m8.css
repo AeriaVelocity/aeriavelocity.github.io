@@ -40,13 +40,22 @@ code {
     color: var(--comment);
     font-style: italic;
 }
-@media (max-height: 900px) {
+@media (max-height: 600px) {
     .content {
         height: 95%;
     }
 }
-@media (max-width: 475px) {
+@media (max-width: 883px) {
     .content {
         width: 95%;
     }
 }
+* {
+    scrollbar-color: var(--heading) var(--background);
+    scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+    background-color: var(--background);
+    width: 8px;
+}
+*::-webkit-scrollbar-thumb { background-color: var(--heading); }
