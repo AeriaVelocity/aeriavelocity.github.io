@@ -1,0 +1,50 @@
+#+title: Arsalan Kazmi
+#+options: toc:nil html-postamble:nil num:nil title:nil html-style:nil
+#+html_head: <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
+#+html_head: <link rel="stylesheet" href="m8.css" type="text/css">
+#+begin_export html
+<img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img>
+#+end_export
+* Arsalan Kazmi
+  :PROPERTIES:
+  :CUSTOM_ID: arsalan-kazmi
+  :END:
+#+begin_export html
+<p id="comment">/* 20 year old college student who likes doing stupid stuff with computers */</p>
+#+end_export
+
+[[https://github.com/That1M8Head][GitHub]] -- [[https://twitter.com/That1M8Head][Twitter]] -- [[https://www.youtube.com/channel/UCN03oe-sc2iHqcTKf9fTwYQ][YouTube]] -- [[file:thestuffindex.html][The Stuff Index]]
+
+\\
+** About me
+   :PROPERTIES:
+   :CUSTOM_ID: about-me
+   :END:
+I'm a [[https://en.wikipedia.org/wiki/Hacker_culture][hacker]], developer, modder and artist.
+
+I'm currently studying at [[https://www.westherts.ac.uk][West Herts College]].
+
+My main languages are C, Python and [[https://zdoom.org/wiki/ZScript][ZScript]].
+
+\\
+
+** My projects
+   :PROPERTIES:
+   :CUSTOM_ID: my-projects
+   :END:
+[[https://sonic-lockandload.github.io][Sonic: Lock & Load]]
+
+A mod for the GZDoom source port based on the Sonic the Hedgehog series, with a focus on fast action and overpowered weapons.
+
+[[https://that1m8head.github.io/searchless][Searchless]]
+
+A non-search engine. Takes your search request and denies it.
+
+[[https://github.com/That1M8Head/gh-get][gh-get]]
+
+A command-line utility written in C which makes cloning from GitHub easier.
+
+#+begin_export html
+<br>
+<p id="comment">/* Current theme is Monokai */</p>
+#+end_export
