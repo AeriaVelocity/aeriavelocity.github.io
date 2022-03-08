@@ -1,0 +1,28 @@
+#+TITLE: Arsalan Kazmi - The Stuff Index
+#+options: toc:nil html-postamble:nil num:nil title:nil html-style:nil
+#+html_head: <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
+#+html_head: <link rel="stylesheet" href="m8.css" type="text/css">
+#+begin_export html
+<a href="index.html"><img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img></a>
+#+end_export
+* Arsalan Kazmi
+  :PROPERTIES:
+  :CUSTOM_ID: arsalan-kazmi
+  :END:
+#+begin_export html
+<p id="comment">/* 20 year old college student who likes doing stupid stuff with computers */</p>
+#+end_export
+
+[[file:index.html][Exit The Stuff Index]]
+
+\\
+** The Stuff Index
+The Stuff Index is a portal to the rest of the website. It's an index. Of stuff.
+
+*** Actual pages
+[[file:terms-i-use.html][Terms I use]] - A list of terms I use sometimes.
+
+*** Fun stuff
+[[file:classic.html][Classic Mode]] - Go back to the past.
+
+[[file:mish.html][mish]] - Access the Mouse-Interactive Shell.

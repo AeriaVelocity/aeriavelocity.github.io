@@ -1,4 +1,4 @@
-#+title: Arsalan Kazmi
+#+title:Arsalan Kazmi
 #+options: toc:nil html-postamble:nil num:nil title:nil html-style:nil
 #+html_head: <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
 #+html_head: <link rel="stylesheet" href="m8.css" type="text/css">
