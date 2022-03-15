@@ -15,10 +15,8 @@
 
 [[file:thestuffindex.html][Return to The Stuff Index]]
 
-\\
 ** Terms I use
 There are certain technical-ish terms that I use. Here's a list of them.
-
 *** Free software
 Free software means software that is free to use. Not software that you get /for/ free, but software that comes with no restrictions on usage, copying, redistribution or modification. It's synonymous with "open source software".
 *** FLOSS

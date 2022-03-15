@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-15 Tue 14:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arsalan Kazmi - Web Design Philosophy</title>
+<meta name="author" content="Arsalan Kazmi" />
+<meta name="generator" content="Org Mode" />
+<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
+<link rel="stylesheet" href="m8.css" type="text/css">
+</head>
+<body>
+<div id="content" class="content">
+<a href="index.html"><img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img></a>
+<div id="outline-container-arsalan-kazmi" class="outline-1">
+<h1 id="arsalan-kazmi">Arsalan Kazmi</h1>
+<div class="outline-text-1" id="text-arsalan-kazmi">
+<p id="comment">/* 20 year old college student who likes doing stupid stuff with computers */</p>
+
+<p>
+<a href="thestuffindex.html">Return to The Stuff Index</a><br />
+</p>
+</div>
+
+<div id="outline-container-org094c5e4" class="outline-2">
+<h2 id="org094c5e4">Web design philosophy</h2>
+<div class="outline-text-2" id="text-org094c5e4">
+<p>
+You may or may not be wondering why this website is relatively minimalist.<br />
+Most of my web design philosophy comes from the Motherf-ing Websites: <a href="http://motherfuckingwebsite.com/">Original</a>, <a href="http://bettermotherfuckingwebsite.com/">Better</a>, <a href="https://bestmotherfucking.website/">Best</a><br />
+I&rsquo;m just going to go ahead and steal the format from those websites.<br />
+</p>
+</div>
+<div id="outline-container-org7a798e1" class="outline-3">
+<h3 id="org7a798e1">The Web Design Codes (patent pending)</h3>
+<div class="outline-text-3" id="text-org7a798e1">
+<ul class="org-ul">
+<li>Should be lightweight, and load fast.<br /></li>
+<li>Fits on any screen you put it on.<br /></li>
+<li>Looks the same in any damn browser you throw at it.<br /></li>
+<li>Should be accessible to every single existant being who visits it.<br /></li>
+<li>Should be legible and get your point across.<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org767facd" class="outline-3">
+<h3 id="org767facd">Mostly just text</h3>
+<div class="outline-text-3" id="text-org767facd">
+<p>
+Websites are there to be read, right? So what&rsquo;s the point of throwing images everywhere? Websites should focus on content first, and fancy crap after. For me, I have the whole thing just be text (sans the avatar).<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge72f05e" class="outline-3">
+<h3 id="orge72f05e">Shorten that content</h3>
+<div class="outline-text-3" id="text-orge72f05e">
+<p>
+The defaults make it so text goes edge-to-edge, which is kind of annoying if you don&rsquo;t have a vertical monitor. You should position your content in the middle of the screen for easier reading.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #50fa7b;">body </span>{
+    <span style="color: #bd93f9;">margin</span>: auto;
+    <span style="color: #bd93f9;">max-width</span>: 500px;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2264ed2" class="outline-3">
+<h3 id="org2264ed2">Give the text some space</h3>
+<div class="outline-text-3" id="text-org2264ed2">
+<p>
+The default line spacing is kind of crap. It&rsquo;s super simple to make it better, though.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #50fa7b;">body </span>{
+    <span style="color: #bd93f9;">line-height</span>: <span style="color: #bd93f9; font-weight: bold;">1.8</span>;
+}
+<span style="color: #50fa7b;">h1, h2, h3 </span>{
+    <span style="color: #6272a4;">/* </span><span style="color: #6272a4;">Headings should have tighter spacing </span><span style="color: #6272a4;">*/</span>
+    <span style="color: #bd93f9;">line-height</span>: <span style="color: #bd93f9; font-weight: bold;">1</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf23336c" class="outline-3">
+<h3 id="orgf23336c">Beef it up</h3>
+<div class="outline-text-3" id="text-orgf23336c">
+<p>
+It&rsquo;s a good idea to make the font size at least 16px, though I recommend 18px.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org60aa734" class="outline-3">
+<h3 id="org60aa734">Just leave the fonts as they are</h3>
+<div class="outline-text-3" id="text-org60aa734">
+<p>
+It&rsquo;s usually better to set the font to the user&rsquo;s default serif or sans-serif font face. It loads a hell of a lot faster than if you were to connect to a server just to use a font.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org6208d79" class="outline-3">
+<h3 id="org6208d79">Have a consistent appearance</h3>
+<div class="outline-text-3" id="text-org6208d79">
+<p>
+Ideally, your website should look the same across all browsers and all platforms. Having the website be just text makes this extremely easy. You will obviously need to set the viewport:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #50fa7b;">meta</span> <span style="color: #ffc9e8;">name</span>=<span style="color: #f1fa8c;">"viewport"</span> <span style="color: #ffc9e8;">content</span>=<span style="color: #f1fa8c;">"width=device-width, initial-scale=1"</span>&gt;
+</pre>
+</div>
+<p>
+You&rsquo;re basically done after that. You might want to add media queries to set the width smaller so it doesn&rsquo;t look odd on mobile devices, but otherwise no further setup is required.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org5ed10a3" class="outline-3">
+<h3 id="org5ed10a3">Have it close to defaults</h3>
+<div class="outline-text-3" id="text-org5ed10a3">
+<p>
+Websites are highly functional and optimised out of the box - website complications are usually the fault of the web designer.<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

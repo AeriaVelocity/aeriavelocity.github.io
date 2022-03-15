@@ -1,0 +1,60 @@
+#+title:Arsalan Kazmi - Web Design Philosophy
+#+options: toc:nil html-postamble:nil num:nil title:nil html-style:nil \n:t
+#+html_head: <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
+#+html_head: <link rel="stylesheet" href="m8.css" type="text/css">
+#+begin_export html
+<a href="index.html"><img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img></a>
+#+end_export
+* Arsalan Kazmi
+  :PROPERTIES:
+  :CUSTOM_ID: arsalan-kazmi
+  :END:
+#+begin_export html
+<p id="comment">/* 20 year old college student who likes doing stupid stuff with computers */</p>
+#+end_export
+
+[[file:thestuffindex.html][Return to The Stuff Index]]
+
+** Web design philosophy
+You may or may not be wondering why this website is relatively minimalist.
+Most of my web design philosophy comes from the Motherf-ing Websites: [[http://motherfuckingwebsite.com/][Original]], [[http://bettermotherfuckingwebsite.com/][Better]], [[https://bestmotherfucking.website/][Best]]
+I'm just going to go ahead and steal the format from those websites.
+*** The Web Design Codes (patent pending)
++ Should be lightweight, and load fast.
++ Fits on any screen you put it on.
++ Looks the same in any damn browser you throw at it.
++ Should be accessible to every single existant being who visits it.
++ Should be legible and get your point across.
+*** Mostly just text
+Websites are there to be read, right? So what's the point of throwing images everywhere? Websites should focus on content first, and fancy crap after. For me, I have the whole thing just be text (sans the avatar).
+*** Shorten that content
+The defaults make it so text goes edge-to-edge, which is kind of annoying if you don't have a vertical monitor. You should position your content in the middle of the screen for easier reading.
+#+begin_src css
+body {
+    margin: auto;
+    max-width: 500px;
+}
+#+end_src
+*** Give the text some space
+The default line spacing is kind of crap. It's super simple to make it better, though.
+#+begin_src css
+body {
+    line-height: 1.8;
+}
+h1, h2, h3 {
+    /* Headings should have tighter spacing */
+    line-height: 1;
+}
+#+end_src
+*** Beef it up
+It's a good idea to make the font size at least 16px, though I recommend 18px.
+*** Just leave the fonts as they are
+It's usually better to set the font to the user's default serif or sans-serif font face. It loads a hell of a lot faster than if you were to connect to a server just to use a font.
+*** Have a consistent appearance
+Ideally, your website should look the same across all browsers and all platforms. Having the website be just text makes this extremely easy. You will obviously need to set the viewport:
+#+begin_src html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+#+end_src
+You're basically done after that. You might want to add media queries to set the width smaller so it doesn't look odd on mobile devices, but otherwise no further setup is required.
+*** Have it close to defaults
+Websites are highly functional and optimised out of the box - website complications are usually the fault of the web designer.
