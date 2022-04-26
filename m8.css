@@ -1,12 +1,11 @@
 /* m8.css - CSS for my website */
 :root {
-    /* I can just change these values whenever I want to change the website's colour scheme lol */
-    --text: #f8f8f2;
-    --background: #282a36;
-    --link: #f1fa8c;
-    --heading: #bd93f9;
-    --comment: #6272a4;
-    --error: #ff5555;
+    --text:         #ece1ec;
+    --background:   #1b1829;
+    --link:         #db8ccf;
+    --heading:      #b679de;
+    --comment:      #8270e3;
+    --error:        #bc4a4a;
 }
 body {
     font-size: 18px;
@@ -16,15 +15,11 @@ body {
 }
 .content {
     width: 500px;
-    height: 80%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--link); }
 h1, h2, h3 { color: var(--heading); line-height: 1; text-align: center; }
 h2:before, h3:before {
     content: "#";
@@ -37,18 +32,17 @@ h2:before, h3:before {
     margin: auto;
     display: block;
     border-radius: 5px;
-    border: 3px solid var(--comment);
+    border: 3px solid var(--heading);
+    box-shadow: 0 0 15px #000000AA;
 }
-code,.org-src-container  {
+code,.src-block  {
     color: var(--code);
-    font-size: 16px;
 }
-.org-src-container { overflow-x: auto; }
+.src-block { overflow-x: auto; }
 #comment {
     color: var(--comment);
     font-style: italic;
     font-family: monospace;
-    font-size: 16px;
     text-align: center;
 }
 @media (max-height: 600px) {
@@ -68,5 +62,6 @@ code,.org-src-container  {
 *::-webkit-scrollbar {
     background-color: var(--background);
     width: 8px;
+    height: 8px;
 }
 *::-webkit-scrollbar-thumb { background-color: var(--heading); }
