@@ -1,11 +1,11 @@
 /* m8.css - CSS for my website */
 :root {
-    --text:         #ece1ec;
-    --background:   #1b1829;
-    --link:         #db8ccf;
-    --heading:      #b679de;
-    --comment:      #8270e3;
-    --error:        #bc4a4a;
+    --text:         #e1e2ec;
+    --background:   #181a29;
+    --link:         #7c7ef3;
+    --heading:      #7b79de;
+    --comment:      #ada3e6;
+    --error:        #e75252;
 }
 body {
     font-size: 18px;
