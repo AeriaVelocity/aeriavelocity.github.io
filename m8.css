@@ -7,6 +7,16 @@
     --comment:      #ada3e6;
     --error:        #e75252;
 }
+@media (prefers-color-scheme: light) {
+    :root {
+        --text:         #181a29;
+        --background:   #e1e2ec;
+        --link:         #5558dd;
+        --heading:      #5a57d9;
+        --comment:      #8b7be4;
+        --error:        #d64151;
+    }
+}
 body {
     font-size: 18px;
     color: var(--text);
