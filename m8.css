@@ -45,11 +45,7 @@ body {
     .content {
         width: 85%;
         box-shadow: none;
-    }
-}
-@media (max-height: 600px) {
-    .content {
-        height: 95%;
+        padding: 10px auto;
     }
 }
 a { color: var(--link); }
