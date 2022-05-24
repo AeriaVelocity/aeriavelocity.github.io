@@ -1,4 +1,5 @@
 /* m8.css - CSS for my website */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab&display=swap');
 :root {
     --text:         #e1e2ec;
     --background:   #181a29;
@@ -17,53 +18,68 @@
         --error:        #d64151;
     }
 }
+
 body {
     font-size: 18px;
+    font-family: 'Roboto Slab', serif;
     color: var(--text);
     background-color: var(--background);
     line-height: 1.8;
-}
-.content {
-    width: 500px;
-    margin: auto;
     padding-top: 80px;
     padding-bottom: 20px;
 }
-a { color: var(--link); }
-h1, h2, h3 { color: var(--heading); line-height: 1; text-align: center; }
-h2:before, h3:before {
-    content: "#";
-    color: var(--comment);
-    position: absolute;
-    transform: translateX(-25px);
+.header {
+    margin: 0 35px;
 }
-.avatar {
-    width: 150px;
+.content {
+    width: 520px;
     margin: auto;
-    display: block;
-    border-radius: 5px;
-    border: 3px solid var(--heading);
+    border-radius: 10px;
     box-shadow: 0 0 15px #000000AA;
+    margin-top: 40px;
+    padding: 10px 50px;
+    transition: box-shadow .2s;
 }
-code,.src-block  {
-    color: var(--code);
-}
-.src-block { overflow-x: auto; }
-#comment {
-    color: var(--comment);
-    font-style: italic;
-    font-family: monospace;
-    text-align: center;
+
+@media (max-width: 676px) {
+    .content {
+        width: 85%;
+        box-shadow: none;
+    }
 }
 @media (max-height: 600px) {
     .content {
         height: 95%;
     }
 }
-@media (max-width: 550px) {
-    .content {
-        width: 95%;
-    }
+a { color: var(--link); }
+
+h1, h2, h3 {
+    color: var(--heading);
+    line-height: 1;
+}
+h1 {
+    text-align: center;
+}
+.avatar {
+    width: 170px;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000000AA;
+}
+code,.src-block  {
+    color: var(--code);
+    font-family: 'JetBrains Mono', monospace;
+}
+.src-block {
+    overflow-x: auto;
+    margin: 0 6%;
+}
+#comment {
+    color: var(--comment);
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
 }
 * {
     scrollbar-color: var(--heading) var(--background);
