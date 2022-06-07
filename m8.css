@@ -1,21 +1,21 @@
 /* m8.css - CSS for my website */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab&display=swap');
 :root {
-    --text:         #e1e2ec;
-    --background:   #181a29;
-    --link:         #7c7ef3;
-    --heading:      #7b79de;
-    --comment:      #ada3e6;
-    --error:        #e75252;
+    --text:         #f7dea2;
+    --background:   #291d18;
+    --link:         #f3a27c;
+    --heading:      #dea179;
+    --comment:      #e6c7a3;
+    --error:        #c03939;
 }
 @media (prefers-color-scheme: light) {
     :root {
         --text:         #181a29;
-        --background:   #e1e2ec;
-        --link:         #5558dd;
-        --heading:      #5a57d9;
-        --comment:      #8b7be4;
-        --error:        #d64151;
+        --background:   #ece6e1;
+        --link:         #a53a09;
+        --heading:      #8e2f03;
+        --comment:      #c78c54;
+        --error:        #a23f48;
     }
 }
 
