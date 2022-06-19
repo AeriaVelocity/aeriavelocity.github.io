@@ -1,57 +1,92 @@
 /* m8.css - CSS for my website */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans&display=swap');
 :root {
-    --text:         #f7dea2;
-    --background:   #291d18;
-    --link:         #f3a27c;
-    --heading:      #dea179;
-    --comment:      #e6c7a3;
+    --text:         #edc6ff;
+    --background:   #211829;
+    --link:         #c37cf3;
+    --heading:      #a973d6;
     --error:        #c03939;
+    --bgimage:      url('background.jpg');
 }
 @media (prefers-color-scheme: light) {
     :root {
-        --text:         #181a29;
-        --background:   #ece6e1;
-        --link:         #a53a09;
-        --heading:      #8e2f03;
-        --comment:      #c78c54;
+        --text:         #4f2981;
+        --background:   #d5c8df;
+        --link:         #6c09a5;
+        --heading:      #8721af;
+        --comment:      #8350bd;
         --error:        #a23f48;
     }
 }
 
 body {
     font-size: 18px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Work Sans', sans-serif;
     color: var(--text);
-    background-color: var(--background);
+    background: var(--bgimage);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     line-height: 1.8;
     padding-top: 80px;
     padding-bottom: 20px;
 }
 .header {
-    margin: 0 35px;
+    margin: auto;
+    width: 700px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    background: var(--background);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000000AA;
+    text-align: center;
+}
+.avatar {
+    width: 170px;
+    margin: auto;
+    display: block;
+    border: 5px solid var(--heading);
+    border-radius: 100px;
+    box-shadow: 0 0 15px #000000AA;
+}
+.bar {
+    margin: 35px auto;
+    width: 450px;
+    padding: 6px;
+    text-align: center;
+    background: var(--background);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000000AA;
 }
 .content {
+    background: var(--background);
     width: 520px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px #000000AA;
     margin-top: 40px;
+    margin-bottom: 70px;
     padding: 10px 50px;
     transition: box-shadow .2s;
 }
 
-@media (max-width: 676px) {
-    .content {
+@media (max-width: 727px) {
+    .content, .header {
         width: 85%;
         box-shadow: none;
         margin: auto;
         padding: 0;
         border-radius: 0px;
     }
+    .bar {
+        box-shadow: none;
+    }
+    body {
+        background: var(--background);
+    }
 }
-a { color: var(--link); }
 
+a { color: var(--link); }
 h1, h2, h3 {
     color: var(--heading);
     line-height: 1;
@@ -59,26 +94,15 @@ h1, h2, h3 {
 h1 {
     text-align: center;
 }
-.avatar {
-    width: 170px;
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #000000AA;
+
+code, pre {
+    font-family: "Source Code Pro", monospace;
 }
-code,.src-block  {
-    color: var(--code);
-    font-family: 'JetBrains Mono', monospace;
-}
-.src-block {
+.src {
     overflow-x: auto;
     margin: 0 6%;
 }
-#comment {
-    color: var(--comment);
-    font-family: 'JetBrains Mono', monospace;
-    text-align: center;
-}
+
 * {
     scrollbar-color: var(--heading) var(--background);
     scrollbar-width: thin;
