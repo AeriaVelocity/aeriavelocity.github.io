@@ -80,6 +80,7 @@ body {
     }
     .bar {
         box-shadow: none;
+        width: auto;
     }
     body {
         background: var(--background);
