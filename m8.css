@@ -1,21 +1,22 @@
 /* m8.css - CSS for my website */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans&display=swap');
 :root {
-    --text:         #edc6ff;
-    --background:   #211829;
-    --link:         #c37cf3;
-    --heading:      #a973d6;
-    --error:        #c03939;
+    --text:         #eeffff;
+    --background:   #181f29;
+    --link:         #53b9c0;
+    --heading:      #87dfdd;
+    --error:        #d92b2b;
     --bgimage:      url('background.jpg');
 }
 @media (prefers-color-scheme: light) {
     :root {
-        --text:         #4f2981;
-        --background:   #d5c8df;
-        --link:         #6c09a5;
-        --heading:      #8721af;
-        --comment:      #8350bd;
-        --error:        #a23f48;
+        --text:         #297a81;
+        --background:   #d3dfe0;
+        --link:         #0990a5;
+        --heading:      #4198ac;
+        --comment:      #50b6bd;
+        --error:        #ad222e;
+        --bgimage:      url('background-light.jpg');
     }
 }
 
