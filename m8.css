@@ -1,28 +1,25 @@
 /* m8.css - CSS for my website */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Nunito&display=swap');
 :root {
-    --text:         #eeffff;
+    --text:         #ffffff;
     --background:   #181f29;
-    --link:         #53b9c0;
-    --heading:      #87dfdd;
+    --accent:       #73cfce;
     --error:        #d92b2b;
     --bgimage:      url('background.jpg');
 }
 @media (prefers-color-scheme: light) {
     :root {
-        --text:         #297a81;
-        --background:   #d3dfe0;
-        --link:         #0990a5;
-        --heading:      #4198ac;
-        --comment:      #50b6bd;
-        --error:        #ad222e;
+        --text:         #000000;
+        --background:   #d4e4e6;
+        --accent:       #007d99;
+        --error:        #af000f;
         --bgimage:      url('background-light.jpg');
     }
 }
 
 body {
     font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: var(--text);
     background: var(--bgimage);
     background-attachment: fixed;
@@ -46,13 +43,13 @@ body {
     width: 170px;
     margin: auto;
     display: block;
-    border: 5px solid var(--heading);
+    border: 5px solid var(--accent);
     border-radius: 100px;
     box-shadow: 0 0 15px #000000AA;
 }
 .bar {
     margin: 35px auto;
-    width: 450px;
+    width: 275px;
     padding: 6px;
     text-align: center;
     background: var(--background);
@@ -88,9 +85,9 @@ body {
     }
 }
 
-a { color: var(--link); }
+a { color: var(--accent); }
 h1, h2, h3 {
-    color: var(--heading);
+    color: var(--accent);
     line-height: 1;
 }
 h1 {
@@ -106,7 +103,7 @@ code, pre {
 }
 
 * {
-    scrollbar-color: var(--heading) var(--background);
+    scrollbar-color: var(--accent) var(--background);
     scrollbar-width: thin;
 }
 *::-webkit-scrollbar {
@@ -114,4 +111,4 @@ code, pre {
     width: 8px;
     height: 8px;
 }
-*::-webkit-scrollbar-thumb { background-color: var(--heading); }
+*::-webkit-scrollbar-thumb { background-color: var(--accent); }

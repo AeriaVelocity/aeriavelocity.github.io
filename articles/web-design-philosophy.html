@@ -1,16 +1,16 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Arsalan Kazmi - Web design philosophy</title>
+        <title>Arsalan Kazmi</title>
         <meta name="description" content="Arsalan Kazmi's personal website" />
         <meta name="author" content="Arsalan Kazmi" />
         <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748384" type="image/png">
-        <link rel="stylesheet" href="m8.css" type="text/css">
+        <link rel="stylesheet" href="../m8.css" type="text/css">
     </head>
     <body>
         <div class="header">
-            <a href="index.html"><img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img></a>
-
+            <a href="../index.html"><img src="https://avatars.githubusercontent.com/u/16748384" class="avatar"></img></a>
+            <a href="https://www.pixiv.net/en/artworks/93869683" style="opacity: 0.7;">source</a>
             <h1>Arsalan Kazmi</h1>
             <p>
                 ♥ 20 years old ⬩ he/him ♥<br>
@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="bar">
-            <span><a href="https://github.com/That1M8Head">GitHub</a> &ndash; <a href="https://twitter.com/That1M8Head">Twitter</a> &ndash; <a href="https://www.youtube.com/channel/UCN03oe-sc2iHqcTKf9fTwYQ">YouTube</a> &ndash; <a href="thestuffindex.html">The Stuff Index</a></span>
+            <span><a href="https://github.com/That1M8Head">GitHub</a> &ndash; <a href="https://twitter.com/That1M8Head">Twitter</a> &ndash; <a href="https://www.youtube.com/channel/UCN03oe-sc2iHqcTKf9fTwYQ">YouTube</a></span>
         </div>
         <div class="content">
             <h2>Web design philosophy</h2>
@@ -34,9 +34,9 @@
                 <li>Should be accessible to every single existant being who visits it.</li>
                 <li>Should be legible and get your point across.</li>
             </ul>
-            <h3>Mostly just text</h3>
+            <h3 id="just-text">Mostly just text</h3>
             <p>Websites are there to be read, right? So what's the point of throwing images everywhere? Websites should focus on content first, and fancy crap after. For me, I have the whole thing just be text (sans the avatar).</p>
-            <h3>Shorten that content</h3>
+            <h3 id="shorten-content">Shorten that content</h3>
             <p>The defaults make it so text goes edge-to-edge, which is kind of annoying if you don't have a vertical monitor. You should position your content in the middle of the screen for easier reading.</p>
             <div class="src">
                 <pre>body {
@@ -44,7 +44,7 @@
     max-width: 500px;
 }</pre>
             </div>
-            <h3>Give the text some space</h3>
+            <h3 id="text-spacing">Give the text some space</h3>
             <p>The default line spacing is kind of crap. It's super simple to make it better, though.</p>
             <div class="src">
             <pre>body {
@@ -55,31 +55,24 @@
     line-height: 1;
 }</pre>
             </div>
-            <h3>Beef it up</h3>
+            <h3 id="font-size">Beef it up</h3>
             <p>It's a good idea to make the font size at least 16px, though I would personally go with 18px.</p>
-            <h3>Just leave the fonts as they are</h3>
-            <p>
-            It's usually better to set the font to the user's default serif or sans-serif font face. It loads a hell of a lot faster than if you were to connect to a server just to use a font. Your readers' browsers will thank you.<br />
-            </p>
-            <h3>Have a consistent appearance</h3>
-            <p>
-            Ideally, your website should look the same across all browsers and all platforms. Having the website be just text makes this extremely easy. You will obviously need to set the viewport:<br />
-            </p>
+            <h3 id="consistency">Have a consistent appearance</h3>
+            <p>Ideally, your website should look the same across all browsers and all platforms.</p>
+            <p>Having the website be just text makes this extremely easy.</p>
+            <p>You will obviously need to set the viewport:</p>
             <div class="src">
             <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
             </div>
-            <p>
-                You're basically done after that. You might want to add media queries to set the width smaller so it doesn't look odd on mobile devices, but otherwise no further setup is required.<br>
-            </p>
-            <h3>Have it close to defaults</h3>
+            <p>You're basically done after that.</p>
+            <p>You might want to add media queries to set the width smaller so it doesn't look odd on mobile devices, but otherwise no further setup is required.</p>
+            <h3 id="close-to-defaults">Have it close to defaults</h3>
             <p>Websites are highly functional and optimised out of the box - website complications are usually the fault of the web designer.</p>
-            <h3>Dark mode</h3>
-            <p>
-                You probably want to have a dark mode for your website.<br>
-                Sure, dark mode is one of the newer trendy trends, but it's actually pretty good.<br>
-                Whether you want to just make your website dark and <i>only</i> dark or have it change depending on the user's preference, it's easy to do both.<br>
-                For the latter, you should use <code>@media (prefers-color-scheme: dark)</code>, like this:
-            </p>
+            <h3 id="dark-mode">Dark mode</h3>
+            <p>You probably want to have a dark mode for your website.</p>
+            <p>Sure, dark mode is one of the newer trendy trends, but it's actually a good idea to include.</p>
+            <p>Whether you want to just make your website dark and <i>only</i> dark or have it change depending on the user's preference, it's easy to do both.</p>
+            <p>For the latter, you should use <code>@media (prefers-color-scheme: dark)</code>, like this:</p>
             <div class="src">
             <pre>@media (prefers-color-scheme: dark) {
     body {
