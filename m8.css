@@ -1,20 +1,24 @@
 /* m8.css - CSS for my website */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=JetBrains+Mono&family=Nunito&display=swap');
 :root {
     --text:         #ffffff;
-    --background:   #181f29;
-    --accent:       #73cfce;
+    --background:   #222222;
+	--border1:		#444444;
+	--border2:		#111111;
+    --accent:       #9d80e6;
     --error:        #d92b2b;
-    --bgimage:      url('background.jpg');
+    --bgimage:      url("background.jpg");
 }
 @media (prefers-color-scheme: light) {
-    :root {
-        --text:         #000000;
-        --background:   #d4e4e6;
-        --accent:       #007d99;
-        --error:        #af000f;
-        --bgimage:      url('background-light.jpg');
-    }
+	:root {
+		--text:         #000000;
+		--background:   #DDDDDD;
+		--border1:		#EEEEEE;
+		--border2:		#BBBBBB;
+		--accent:       #7261c0;
+		--error:        darkred;
+		--bgimage:      url("background-light.jpg");
+	}
 }
 
 body {
@@ -30,12 +34,15 @@ body {
     padding-bottom: 20px;
 }
 .header {
+    font-family: 'JetBrains Mono', monospace;
     margin: auto;
     width: 700px;
     padding-top: 40px;
     padding-bottom: 15px;
+    border-top: 1px solid var(--border1);
+    border-bottom: 1px solid var(--border2);
     background: var(--background);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 15px #000000AA;
     text-align: center;
 }
@@ -49,22 +56,26 @@ body {
 }
 .bar {
     margin: 35px auto;
-    width: 275px;
+    width: 260px;
     padding: 6px;
+    border-top: 1px solid var(--border1);
+    border-bottom: 1px solid var(--border2);
     text-align: center;
     background: var(--background);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 15px #000000AA;
 }
 .content {
     background: var(--background);
     width: 520px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 15px #000000AA;
     margin-top: 40px;
     margin-bottom: 70px;
     padding: 10px 50px;
+    border-top: 1px solid var(--border1);
+    border-bottom: 1px solid var(--border2);
     transition: box-shadow .2s;
 }
 
@@ -75,10 +86,12 @@ body {
         margin: auto;
         padding: 0;
         border-radius: 0px;
+	border: none;
     }
     .bar {
         box-shadow: none;
         width: auto;
+	border: none;
     }
     body {
         background: var(--background);
@@ -89,6 +102,7 @@ a { color: var(--accent); }
 h1, h2, h3 {
     color: var(--accent);
     line-height: 1;
+    font-family: 'JetBrains Mono', monospace;
 }
 h1 {
     text-align: center;
