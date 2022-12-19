@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=JetBrains+Mono&family=Nunito&display=swap');
 :root {
     --text:         #ffffff;
-    --background:   #222222;
+    --background:   #222222f5;
 	--border1:		#444444;
 	--border2:		#111111;
-    --accent:       #9d80e6;
+    --accent:       #d69df7;
     --error:        #d92b2b;
     --bgimage:      url("background.jpg");
 }
 @media (prefers-color-scheme: light) {
 	:root {
 		--text:         #000000;
-		--background:   #DDDDDD;
+		--background:   #ddddddea;
 		--border1:		#EEEEEE;
 		--border2:		#BBBBBB;
-		--accent:       #7261c0;
+		--accent:       #7970bd;
 		--error:        darkred;
 		--bgimage:      url("background-light.jpg");
 	}
@@ -54,17 +54,6 @@ body {
     border-radius: 100px;
     box-shadow: 0 0 15px #000000AA;
 }
-.bar {
-    margin: 35px auto;
-    width: 260px;
-    padding: 6px;
-    border-top: 1px solid var(--border1);
-    border-bottom: 1px solid var(--border2);
-    text-align: center;
-    background: var(--background);
-    border-radius: 5px;
-    box-shadow: 0 0 15px #000000AA;
-}
 .content {
     background: var(--background);
     width: 520px;
@@ -86,12 +75,8 @@ body {
         margin: auto;
         padding: 0;
         border-radius: 0px;
-	border: none;
-    }
-    .bar {
-        box-shadow: none;
-        width: auto;
-	border: none;
+	    border: none;
+        background: none;
     }
     body {
         background: var(--background);
