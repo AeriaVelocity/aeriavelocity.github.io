@@ -1,96 +1,69 @@
 /* m8.css - CSS for my website */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=JetBrains+Mono&family=Nunito&display=swap');
 :root {
-    --text:         #ffffff;
-    --background:   #222222f5;
-	--border1:		#444444;
-	--border2:		#111111;
     --accent:       #d69df7;
-    --error:        #d92b2b;
-    --bgimage:      url("background.jpg");
 }
 @media (prefers-color-scheme: light) {
 	:root {
-		--text:         #000000;
-		--background:   #ddddddea;
-		--border1:		#EEEEEE;
-		--border2:		#BBBBBB;
 		--accent:       #7970bd;
-		--error:        darkred;
-		--bgimage:      url("background-light.jpg");
 	}
 }
 
+html {
+    background-image: url("background-light.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
 body {
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
-    color: var(--text);
-    background: var(--bgimage);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    color: #000000;
+    background: #dddddde5;
     line-height: 1.8;
     padding-top: 80px;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px;
     padding-bottom: 20px;
+}
+@media (prefers-color-scheme: dark) {
+    html {
+        background-image: url("background.jpg");
+    }
+    body {
+        color: #ffffff;
+        background: #222222f0;
+    }
 }
 .header {
     font-family: 'JetBrains Mono', monospace;
     margin: auto;
-    width: 700px;
     padding-top: 40px;
-    padding-bottom: 15px;
-    border-top: 1px solid var(--border1);
-    border-bottom: 1px solid var(--border2);
-    background: var(--background);
-    border-radius: 5px;
-    box-shadow: 0 0 15px #000000AA;
+    padding-bottom: 5px;
     text-align: center;
 }
 .avatar {
     width: 170px;
     margin: auto;
     display: block;
-    border: 5px solid var(--accent);
-    border-radius: 100px;
-    box-shadow: 0 0 15px #000000AA;
-}
-.content {
-    background: var(--background);
-    width: 520px;
-    margin: auto;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #000000AA;
-    margin-top: 40px;
-    margin-bottom: 70px;
-    padding: 10px 50px;
-    border-top: 1px solid var(--border1);
-    border-bottom: 1px solid var(--border2);
-    transition: box-shadow .2s;
+    border: 4px solid var(--accent);
+    border-radius: 15px;
 }
 
-@media (max-width: 727px) {
-    .content, .header {
-        width: 85%;
-        box-shadow: none;
-        margin: auto;
-        padding: 0;
-        border-radius: 0px;
-	    border: none;
-        background: none;
-    }
+@media (max-width: 700px) {
     body {
-        background: var(--background);
+        padding: 5%;
+        max-width: initial;
     }
 }
 
 a { color: var(--accent); }
 h1, h2, h3 {
+    text-align: center;
     color: var(--accent);
     line-height: 1;
     font-family: 'JetBrains Mono', monospace;
-}
-h1 {
-    text-align: center;
 }
 
 code, pre {
@@ -102,11 +75,11 @@ code, pre {
 }
 
 * {
-    scrollbar-color: var(--accent) var(--background);
+    scrollbar-color: var(--accent) black;
     scrollbar-width: thin;
 }
 *::-webkit-scrollbar {
-    background-color: var(--background);
+    background: black;
     width: 8px;
     height: 8px;
 }
