@@ -12,6 +12,7 @@
                 background-color: black;
                 font-size: 16px;
                 font-family: monospace;
+                padding-left: 10px;
             }
             a { color: white; }
             @keyframes cursor-blink {
@@ -22,24 +23,87 @@
                 animation: cursor-blink 1s steps(1) infinite;
             }
         </style>
+        <noscript>
+            <style>
+                .content {
+                    display: none;
+                }
+            </style>
+            <pre>
+Loading that1m8head.github.io/page.html ...
+error: unknown subdirectory.
+Loading initial 404 page ...
+error: you need to enable javascript first.
+
+Navigate to index.html to continue..._
+            </pre>
+        </noscript>
         <script>
-            document.addEventListener("keypress", function(event) {
+            document.addEventListener("keydown", function(event) {
                 if (event.key === "Enter") {
                     window.location.href = "index.html";
                 }
+                else if (event.key === "Backspace" || /^[a-zA-Z0-9]$/.test(event.key)) {
+                    const os = navigator.userAgent;
+                    if (os.includes("Windows")) {
+                        document.getElementById("message").innerText = "No, this isn't an actual command prompt.\nJust hit Enter or click on `reboot` to go back to the index page.";
+                    }
+                    else if (os.includes("Mac")) {
+                        document.getElementById("message").innerText = "No, this isn't an actual Terminal window.\nJust hit Return or click on `reboot` to go back to the index page.";
+                    }
+                    else if (os.includes("Linux")) {
+                        document.getElementById("message").innerText = "No, this isn't an actual terminal emulator.\nJust hit Enter or click on `reboot` to go back to the index page.";
+                    }
+                    else {
+                        document.getElementById("message").innerText = "No, this isn't an actual command line.\nJust hit Enter/Return or click on `reboot` to go back to the index page.";
+                    }
+                }
             });
         </script>
-    <body onload="document.getElementById('thispage').innerText = window.location.href.split('/').pop();">
-        <p>
-            Starting systemd version 69.4-20-that1m8head<br>
-            /dev/sda1: recovering journal<br>
-            /dev/sda1: clean: 65535/4815162342 files, a lot/way too many blocks<br>
-            404: Root website loaded successfully, but /<span id="thispage">this page</span> does not exist.<br>
-            Bailing out, you are on your own. Good luck.
-        </p>
-        <p>
-            browser: can't access page; job control turned off<br>
-            [rootfs ]# <a href="index.html">reboot</a><span id="cursor">_</span>
-        </p>
+    <body>
+        <div class="content">
+            <p>
+                Starting <span id="engine">engine</span> version <span id="version">1.1.1</span><br>
+                browser: recovering website<br>
+                browser: clean: 65535/4815162342 files, 69/420 blocks<br>
+                404: Root website loaded successfully, <span id="reason">but /<span id="thispage">this page</span> does not exist.</span><br>
+                Bailing out, you are on your own. Good luck.
+            </p>
+            <p>
+                browser: can't access page; site navigation turned off<br>
+                [404page ]# <a href="index.html">reboot</a><span id="cursor">_</span>
+            </p>
+            <span id="message"></span>
+        </div>
+        <script>
+            /* Browser version */
+            userAgent = navigator.userAgent;
+            if (userAgent.includes("AppleWebKit")) {
+                renderingEngine = "webkit"; // Safari, Chrome, Edge (Blink)
+                const match = userAgent.match(/AppleWebKit\/([\d.]+)/);
+                renderingEngineVersion = match ? match[1] : "";
+            } 
+            else if (userAgent.includes("Gecko")) {
+                renderingEngine = "gecko"; // Firefox
+                const match = userAgent.match(/rv:([\d.]+)/);
+                renderingEngineVersion = match ? match[1] : "";
+            }
+            else {
+                renderingEngine = "unknown";
+                renderingEngineVersion = "";
+            }
+            document.getElementById("engine").innerText = renderingEngine;
+            document.getElementById("version").innerText = renderingEngineVersion;
+
+            /* Reason for 404 */
+            var page = window.location.href.split('/').pop();
+            if (page == "404" || page == "404.html") {
+                document.getElementById("reason").innerHTML = "but you navigated to the 404 page directly for some reason.";
+            }
+            else {
+                document.getElementById('thispage').innerText = page;
+
+            }
+        </script>
     </body>
 </html>
