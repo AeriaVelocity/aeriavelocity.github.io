@@ -7,11 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/16748383" type="image/png">
         <style>
+            @font-face {
+                font-family: 'Perfect DOS VGA 437';
+                src: url('perfect-dos-vga-437.ttf') format('truetype');
+            }
             body {
                 color: white;
                 background-color: black;
                 font-size: 16px;
-                font-family: monospace;
+                font-family: "Perfect DOS VGA 437", monospace;
                 padding-left: 10px;
             }
             a { color: white; }
@@ -28,14 +32,18 @@
                 .content {
                     display: none;
                 }
+                pre {
+                    font-family: "Perfect DOS VGA 437", monospace;
+                }
             </style>
             <pre>
+error: no such feature: 4a6176-6153-6372-697074
 Loading that1m8head.github.io/page.html ...
-error: unknown subdirectory.
+error: no such subdirectory.
 Loading initial 404 page ...
 error: you need to enable javascript first.
 
-Navigate to index.html to continue..._
+Navigate to index.html to continue...<span id="cursor">_</span>
             </pre>
         </noscript>
         <script>
@@ -63,7 +71,7 @@ Navigate to index.html to continue..._
     <body>
         <div class="content">
             <p>
-                Starting <span id="engine">engine</span> version <span id="version">1.1.1</span><br>
+                Starting <span id="engine">engine</span> version <span id="version">1.1.1</span>-<span id="browser"></span><br>
                 browser: recovering website<br>
                 browser: clean: 65535/4815162342 files, 69/420 blocks<br>
                 404: Root website loaded successfully, <span id="reason">but /<span id="thispage">this page</span> does not exist.</span><br>
@@ -92,8 +100,14 @@ Navigate to index.html to continue..._
                 renderingEngine = "unknown";
                 renderingEngineVersion = "";
             }
+            var currentBrowser = userAgent.includes("Edg") ? "edge" :
+                                 userAgent.includes("OPR") || userAgent.includes("Opera") ? "Opera" :
+                                 userAgent.includes("Chrome") ? "chrome" :
+                                 userAgent.includes("Firefox") ? "firefox" :
+                                 userAgent.includes("Safari") ? "safari" : "unknown";
             document.getElementById("engine").innerText = renderingEngine;
             document.getElementById("version").innerText = renderingEngineVersion;
+            document.getElementById("browser").innerText = currentBrowser;
 
             /* Reason for 404 */
             var page = window.location.href.split('/').pop();
