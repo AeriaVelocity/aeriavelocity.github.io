@@ -1,101 +1,155 @@
 /* m8.css - CSS for my website */
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=JetBrains+Mono&family=Nunito&display=swap');
+
+/* Define the accent color */
 :root {
-    --accent:       #aa86ee;
-}
-@media (prefers-color-scheme: light) {
-	:root {
-		--accent:       #6c61c5;
-	}
+    --accent: #aa86ee;
 }
 
+/* Adjust accent color based on color scheme preference */
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent: #6c61c5;
+    }
+}
+
+/* Apply styles to HTML and body */
 html {
-    background-image: url("background-light.jpg");
+    background-color: #222222;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
+
 body {
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
-    color: #000000;
-    background: #ddddddf0;
     line-height: 1.8;
+}
+
+/* Common styles for boxes and headers */
+.box, .header, .box h2, .box h3 {
+    color: #ffffff;
+    background: #272727;
     max-width: 600px;
-    margin: auto;
-    padding: 50px;
+    margin: 50px auto;
+    padding: 20px 50px;
+    border: 5px solid var(--accent);
+    border-radius: 24px;
+    box-shadow: 0px 0px 9px 5px #00000054;
 }
-@media (prefers-color-scheme: dark) {
+
+/* Adjust colors for light color scheme */
+@media (prefers-color-scheme: light) {
     html {
-        background-image: url("background.jpg");
+        background: #ddd;
     }
-    body {
-        color: #ffffff;
-        background: #222222f0;
+    .box, .header, .box h2, .box h3 {
+        color: #272727;
+        background: #ddd;
     }
 }
+
+/* Header styles */
 .header {
     font-family: 'JetBrains Mono', monospace;
     align-items: center;
     gap: 10px;
+    padding: 40px 50px;
     cursor: pointer;
     display: grid;
     grid-template-columns: auto 1fr;
-    margin: 5px 50px;
 }
+
+/* Style for the avatar */
+.avatar {
+    height: 150px;
+    width: auto;
+    border: 3px solid var(--accent);
+    border-radius: 24px;
+    box-shadow: 0px 0px 9px 5px #00000054;
+}
+
 .header-text {
     display: grid;
     grid-template-rows: auto auto;
     gap: 20px;
     margin: 15px auto;
+    text-align: center;
 }
+
 .header-text h1, .header-text h2 {
     margin: 0;
 }
+
 .avatar {
-    height: 125px;
+    height: 150px;
     border: 3px solid var(--accent);
-    border-radius: 10px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 9px 5px #00000054;
 }
+
 .header:after {
     clear: both;
 }
-@media (max-width: 700px) {
-    body {
-        padding: 5%;
-        max-width: initial;
-    }
-}
-@media (max-width: 525px) {
+
+/* Responsive design */
+@media (max-width: 527px) {
     .avatar {
         display: none;
     }
+    .header {
+        display: block;
+    }
+    .box {
+        padding: 25px;
+    }
 }
 
-a { color: var(--accent); }
-h1, h2, h3 {
+/* Social links */
+#socials {
+    font-size: 22px;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    padding: 5px 50px;
+}
+
+/* Links and headings */
+a {
+    color: var(--accent);
+}
+
+h1, h2, h3, .box h2, .box h3 {
     text-align: center;
     color: var(--accent);
     line-height: 1;
     font-family: 'JetBrains Mono', monospace;
 }
 
+/* Code and preformatted text */
 code, pre {
     font-family: "Source Code Pro", monospace;
 }
+
 .src {
     overflow-x: auto;
     margin: 0 6%;
 }
 
+/* Scrollbar styles */
 * {
     scrollbar-color: var(--accent) black;
     scrollbar-width: thin;
 }
+
 *::-webkit-scrollbar {
     background: black;
     width: 8px;
     height: 8px;
 }
-*::-webkit-scrollbar-thumb { background-color: var(--accent); }
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+}
