@@ -29,10 +29,13 @@ body {
     line-height: 1.8;
 }
 
-/* Common styles for boxes and headers */
-.box, .header, .box h2, .box h3 {
+header, footer, main, nav, h1, h2, h3 {
     color: #ffffff;
     background: #272727;
+}
+
+/* Common styles for boxes and headers */
+header, footer, main, nav, section h2, section h3 {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px 50px;
@@ -46,14 +49,14 @@ body {
     html {
         background: #ddd;
     }
-    .box, .header, .box h2, .box h3 {
+    body, header, main, nav, h1, h2, h3 {
         color: #272727;
         background: #ddd;
     }
 }
 
 /* Header styles */
-.header {
+header {
     font-family: 'JetBrains Mono', monospace;
     align-items: center;
     gap: 10px;
@@ -72,7 +75,7 @@ body {
     box-shadow: 0px 0px 9px 5px #00000054;
 }
 
-.header-text {
+header-text {
     display: grid;
     grid-template-rows: auto auto;
     gap: 20px;
@@ -80,7 +83,7 @@ body {
     text-align: center;
 }
 
-.header-text h1, .header-text h2 {
+header-text h1, header-text h2 {
     margin: 0;
 }
 
@@ -91,7 +94,7 @@ body {
     box-shadow: 0px 0px 9px 5px #00000054;
 }
 
-.header:after {
+header:after {
     clear: both;
 }
 
@@ -100,7 +103,7 @@ body {
     body {
         font-size: 18px;
     }
-    .header {
+    header {
         display: flex;
         flex-direction: column;
         align-items: center;
