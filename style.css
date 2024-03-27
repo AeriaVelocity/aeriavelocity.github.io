@@ -12,7 +12,7 @@ body {
 }
 
 a {
-    color: #4c08a3;
+    color: #a30868;
     text-decoration: none;
 }
 a:hover {
@@ -25,7 +25,7 @@ a:hover {
         color: #ffffff;
     }
     a {
-        color: #bd9ff3;
+        color: #f39fe5;
     }
 }
 
